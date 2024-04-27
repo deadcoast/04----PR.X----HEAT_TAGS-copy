@@ -185,10 +185,7 @@
           "description": "Contextual information that might influence the interpretation, such as current task specifics"
         }
       },
-      "required": [
-        "tag",
-        "context"
-      ]
+      "required": ["tag", "context"]
     }
   },
   {
@@ -206,10 +203,7 @@
           "description": "The user's query or requirements for the code review."
         }
       },
-      "required": [
-        "code_snippet",
-        "user_query"
-      ]
+      "required": ["code_snippet", "user_query"]
     }
   },
   {
@@ -236,10 +230,7 @@
           "description": "Details about the user that might influence development assistance."
         }
       },
-      "required": [
-        "project_aspect",
-        "user_details"
-      ]
+      "required": ["project_aspect", "user_details"]
     },
     "methods": [
       {
@@ -257,10 +248,7 @@
               "description": "Details about the user to tailor the development assistance."
             }
           },
-          "required": [
-            "project_aspect",
-            "user_details"
-          ]
+          "required": ["project_aspect", "user_details"]
         }
       },
       {
@@ -303,60 +291,42 @@
       {
         "name": "strategic_planning",
         "description": "Engages in strategic planning with a focus on narrative-driven UI elements.",
-        "heatTagsUtilized": [
-          "{~HEAT.STOKE revcon ~1}",
-          "{~HEAT.STOKE fatm ~5}"
-        ]
+        "heatTagsUtilized": ["{~HEAT.STOKE revcon ~1}", "{~HEAT.STOKE fatm ~5}"]
       },
       {
         "name": "architecture_innovation",
         "description": "Discusses architectural choices and feature development for a 128K model.",
-        "heatTagsUtilized": [
-          "{~HEAT.STOKE SOTA ~3}",
-          "{~HEAT.STOKE rmct ~4}"
-        ]
+        "heatTagsUtilized": ["{~HEAT.STOKE SOTA ~3}", "{~HEAT.STOKE rmct ~4}"]
       },
       {
         "name": "risk_management",
         "description": "Identifies and strategizes around potential risks to embed resilience in the application.",
-        "heatTagsUtilized": [
-          "{~HEAT.STOKE 3CF ~6}"
-        ]
+        "heatTagsUtilized": ["{~HEAT.STOKE 3CF ~6}"]
       },
       {
         "name": "operational_excellence",
         "description": "Ensures app stability and performance through efficient testing strategies.",
-        "heatTagsUtilized": [
-          "{~HEAT.STOKE STOKE ~8}"
-        ]
+        "heatTagsUtilized": ["{~HEAT.STOKE STOKE ~8}"]
       },
       {
         "name": "maximizing_code_output",
         "description": "Emphasizes creating full, complete code blocks in each response, minimizing explanatory text.",
-        "heatTagsUtilized": [
-          "{~HEAT.skully}"
-        ]
+        "heatTagsUtilized": ["{~HEAT.skully}"]
       },
       {
         "name": "framework_compatibility",
         "description": "Focuses on compatibility and efficiency in user-guided step implementation.",
-        "heatTagsUtilized": [
-          "{~HEAT.cinj}"
-        ]
+        "heatTagsUtilized": ["{~HEAT.cinj}"]
       },
       {
         "name": "prompt_format_adaptation",
         "description": "Ensures optimal comprehension and application of advanced prompt formats for code generation efficiency.",
-        "heatTagsUtilized": [
-          "{~HEAT.inj}"
-        ]
+        "heatTagsUtilized": ["{~HEAT.inj}"]
       },
       {
         "name": "finalization_enhancement",
         "description": "Guides the application towards technological excellence, ensuring high-quality, innovative outcomes.",
-        "heatTagsUtilized": [
-          "{~HEAT}"
-        ]
+        "heatTagsUtilized": ["{~HEAT}"]
       }
     ],
     "commonVariables": [
@@ -386,10 +356,7 @@
           "description": "Contextual information that might influence the interpretation, such as current task specifics."
         }
       },
-      "required": [
-        "tag",
-        "context"
-      ]
+      "required": ["tag", "context"]
     }
   },
   {
@@ -412,9 +379,7 @@
               "description": "The specific HEAT~ codetag for which extended usage guidance is requested."
             }
           },
-          "required": [
-            "codetag"
-          ]
+          "required": ["codetag"]
         }
       }
     ]
@@ -476,10 +441,7 @@
               "description": "The user query or context for the code review."
             }
           },
-          "required": [
-            "code_snippet",
-            "user_query"
-          ]
+          "required": ["code_snippet", "user_query"]
         }
       },
       {
@@ -592,10 +554,7 @@
             "description": "The user's query or feedback regarding the code review."
           }
         },
-        "required": [
-          "code_snippet",
-          "user_query"
-        ]
+        "required": ["code_snippet", "user_query"]
       },
       {
         "name": "metaChainUnderstanding",
@@ -615,10 +574,7 @@
             "description": "Additional details provided by the user that might aid in the development assistance."
           }
         },
-        "required": [
-          "project_aspect",
-          "user_details"
-        ]
+        "required": ["project_aspect", "user_details"]
       },
       {
         "name": "constructMetaChainDevelopmentPlan",
@@ -629,9 +585,7 @@
             "description": "The specific project aspect to develop a plan for."
           }
         },
-        "required": [
-          "project_aspect"
-        ]
+        "required": ["project_aspect"]
       },
       {
         "name": "finalizeAndConfirmDeploymentReadiness",
