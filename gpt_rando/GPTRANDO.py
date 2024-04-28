@@ -712,7 +712,7 @@ class InlineSearchManager:
 
         self.text_widget.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
-        self._extracted_from_init_25()
+        self.apply_palette_and_init()
 
     def init(self, text_widget):
         self.text_widget = text_widget
@@ -725,7 +725,7 @@ class InlineSearchManager:
 
         self.apply_palette()
 
-        self._extracted_from_init_25()
+        self.apply_palette_and_init()
         self._display_message("Ready")
 
         self.text_widget.focus_set()
@@ -734,8 +734,7 @@ class InlineSearchManager:
 
         self.master.mainloop()
 
-    # TODO Rename this here and in `apply_palette` and `init`
-    def _extracted_from_init_25(self):
+    def apply_palette_and_init(self):
         self.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         self.text_widget.tag_configure(
             "search_highlight", background=self.palette.get('tertiary', '#202020')
@@ -755,6 +754,40 @@ class InlineSearchManager:
     """
     Provides advanced inline search functionality for the HEAT UP editor.
     """
+
+    def pack(self, side, fill, expand):
+
+
+    def hide_search_bar(self):
+        """
+        Hides the search bar.
+        """
+        self.search_bar.pack_forget()
+        self.clear_search_highlights()
+
+    def show_search_bar(self):
+        """
+        Shows the search bar.
+        """
+        self.search_bar.pack(side=tk.TOP, fill=tk.X)
+        self.search_bar.focus_set()
+
+    def prompt_search_query(self, event):
+        """
+        Prompts the user to enter a search query.
+        """
+        self.show_search_bar()
+        self.search_bar.delete(0, tk.END)
+
+    def find_next(self):
+        pass
+
+    def find_previous(self):
+        pass
+
+    def perform_search(self, event):
+
+        pass
 
 
 def init(self, text_widget):
