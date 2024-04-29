@@ -1964,17 +1964,17 @@ self.master.configure(bg=self.color_palette['secondary'])
 self.dynamic_widgets = ()
 
 
-def apply_dynamic_theme(self, widget_name, widget):
+def apply_dynamic_theme(self, widget_name, WidgetTest):
 
 
 # 6. Applies dynamic interactive color effects for user feedback
 
-widget.bind('<Enter>', lambda e: self.on_hover(widget_name, widget, enter=True))
-widget.bind('<Leave>', lambda e: self.on_hover(widget_name, widget, enter=False))
-self.dynamic_widgets[widget_name] = widget
+WidgetTest.bind('<Enter>', lambda e: self.on_hover(widget_name, WidgetTest, enter=True))
+WidgetTest.bind('<Leave>', lambda e: self.on_hover(widget_name, WidgetTest, enter=False))
+self.dynamic_widgets[widget_name] = WidgetTest
 
 
-def on_hover(self, widget_name, widget, enter=False):
+def on_hover(self, widget_name, WidgetTest, enter=False):
    """
    Adjusts color brightness on hover, increasing contrast for readability and visual appeal.
    """
@@ -1983,7 +1983,7 @@ def on_hover(self, widget_name, widget, enter=False):
 original_color_hex = self.color_palette[widget_name]
 hovered_color_hex = self.\_adjust_color_brightness(original_color_hex, lighter=enter)
 
-widget.configure(bg=hovered_color_hex)
+WidgetTest.configure(bg=hovered_color_hex)
 
 
 def   \_adjust_color_brightness(self, hex_color, lighter=True):
@@ -2049,7 +2049,7 @@ def  **
 init ** (self, title, palette, content=''):
 
 """
-Initializes the FLARE widget.
+Initializes the FLARE WidgetTest.
 Parameters:
 title (str): The title for the FLARE window.
 palette (dict): The color palette for styling.
@@ -2091,9 +2091,9 @@ def   \_configure_widget(self, palette, content):
 
 
 """
-Configures the FLARE widget's text area with aesthetic options.
+Configures the FLARE WidgetTest's text area with aesthetic options.
 Parameters:
-palette (dict): Color palette to style the widget.
+palette (dict): Color palette to style the WidgetTest.
 content (str): Content to preload into the text area.
 """
 self.text_area.insert('1.0', content)
@@ -2121,7 +2121,7 @@ self.window.withdraw()
 def apply_theme(self):
 
 
-# 22. Set the aesthetics of the text widget
+# 22. Set the aesthetics of the text WidgetTest
 
 self.text_widget.configure(
    bg=palette['raisin_black'],
@@ -2130,7 +2130,7 @@ self.text_widget.configure(
    insertbackground=palette['wine']
 )
 
-`1  # Configure additional text widget tags for syntax highlighting 2self.text_widget.tag_configure('keyword', foreground=palette['xanthous'], font=('Courier New', 12, 'bold')) 3self.text_widget.tag_configure('string', foreground=palette['peach_yellow'], font=('Courier New', 12, 'italic')) 4# More tags based on the color theme can be added here`
+`1  # Configure additional text WidgetTest tags for syntax highlighting 2self.text_widget.tag_configure('keyword', foreground=palette['xanthous'], font=('Courier New', 12, 'bold')) 3self.text_widget.tag_configure('string', foreground=palette['peach_yellow'], font=('Courier New', 12, 'italic')) 4# More tags based on the color theme can be added here`
 
 
 def adjust_font(self, font_name: str, size: int, style: str):
@@ -2182,7 +2182,7 @@ def  **
 
 init ** (self, text_widget):
 
-# 34. Initialize the ThemeManager with a text widget
+# 34. Initialize the ThemeManager with a text WidgetTest
 
 self.text_widget = text_widget
 self.apply_theme()
@@ -2191,7 +2191,7 @@ self.apply_theme()
 def apply_theme(self):
 
 
-# 35. Set up the text widget with the HEAT palette
+# 35. Set up the text WidgetTest with the HEAT palette
 
 self.text_widget.config(
    bg=palette['raisin_black'],
@@ -2299,7 +2299,7 @@ root = tk.Tk()
 
 theme_manager = ThemeManager(root)
 
-# 49. Assuming text_widget is the Text widget of the editor
+# 49. Assuming text_widget is the Text WidgetTest of the editor
 
 theme_manager.highlight_syntax(text_widget)
 
@@ -2361,7 +2361,7 @@ self.text_area = ThemedText(self.parent, self.palette)
 self.text_area.pack(expand=True, fill=tk.BOTH)
 
 
-# Bindings for advanced user interactions with the text widget 2self.text_area.bind('<Control-Button-1>', self.create_hyperlink) 3# ... other bindings for text manipulation (cut, copy, paste, etc.)`
+# Bindings for advanced user interactions with the text WidgetTest 2self.text_area.bind('<Control-Button-1>', self.create_hyperlink) 3# ... other bindings for text manipulation (cut, copy, paste, etc.)`
 
 def create_hyperlink(self, event):
    """ Creates a hyperlink within the text area based on a user's Ctrl+Click action. """
